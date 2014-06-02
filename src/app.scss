@@ -1,0 +1,150 @@
+/*!
+Written by Sean Clayton
+http://skulbuny.com
+@_seanclayton
+http://github.com/skulbuny
+*/
+
+// Imports
+@import "normalize";
+
+$dark-gray: #202020;
+$light-gray: #f0f0f0;
+$blue: #09f;
+$red: #C92121;
+
+$app-bg: desaturate(darken($blue, 30%), 70%);
+$font-color: $light-gray;
+$button-bg: $blue;
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  box-sizing: border-box;
+  background: $app-bg;
+  color: $font-color;
+  text-shadow: 0 1px 1px rgba(black, .5);
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  padding: .5em;
+
+  @media only screen and (max-width: 560px) {
+    padding: .25em;
+  }
+}
+
+.main {
+  margin: 0 auto;
+  width: 960px;
+
+  @media only screen and (max-width: 1024px) {
+    width: 640px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 500px;
+  }
+
+  @media only screen and (max-width: 560px) {
+    width: 362px;
+  }
+
+  @media only screen and (max-width: 370px) {
+    width: auto;
+  }
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5% 0 2em 0;
+  height: 60px;
+
+  @media only screen and (max-width: 560px) {
+    font-size: 1.75em;
+  }
+}
+
+.personality-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  height: 47px;
+
+  @media only screen and (max-width: 560px) {
+    font-size: 1.75em;
+  }
+}
+
+.personality {
+  font-family: "Oswald", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  height: 71px;
+
+  @media only screen and (max-width: 560px) {
+    font-size: 2.25em;
+  }
+}
+
+.description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 2em 0 ;
+  height: 78px;
+
+  @media only screen and (max-width: 560px) {
+    margin: 1.5em 0;
+    font-size: 1em;
+  }
+}
+
+.button {
+  $color: $red;
+  $transition-speed: 80ms;
+  display: inline-block;
+  margin: 2em auto 0 auto;
+  font-size: 1.5em;
+  padding: .5em 1em;
+  background-color: $color;
+  color: $font-color;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 3px 0 rgba(darken($color, 20%), 1), 0 0 12px rgba(black, .25);
+  transition: $transition-speed ease background-color, $transition-speed ease box-shadow;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media only screen and (max-width: 560px) {
+    margin: 0 auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($color, 10%);
+    box-shadow: 0 3px 0 rgba(darken($color, 10%), 1), 0 0 12px rgba(black, .25);
+  }
+
+  &:active {
+    background-color: lighten($color, 5%);
+    box-shadow: 0 3px 0 rgba(darken($color, 15%), 1);
+  }
+}

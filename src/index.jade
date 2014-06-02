@@ -1,0 +1,31 @@
+doctype html
+html.app
+  head
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    link(rel="stylesheet",href="app.css")
+    script(type='application/javascript', src='fastclick.js')
+  body.app
+    header.main
+        h1.title Zombie Apocolypse Role Generator
+    section.main
+      section.generator.container
+        h2.personality-title Your Personality:
+        h3(data-type="personality").personality
+        p(data-type="description").description
+        a(data-type="generator-button").button Generate A Role
+    footer.main
+    script(type="text/javascript").
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans::latin', 'Oswald::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="app.js")
