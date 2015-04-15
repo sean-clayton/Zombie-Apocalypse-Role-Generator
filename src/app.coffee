@@ -1,8 +1,8 @@
 ###
 Written by Sean Clayton
-http://skulbuny.com
-http://github.com/skulbuny
-@_seanclayton
+https://seanclayton.me
+https://github.com/sean-clayton
+@seanybingbong
 ###
 
 personalityElement = $('h3[data-type="personality"]')
